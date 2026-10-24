@@ -56,3 +56,15 @@ flutter build apk --debug --no-pub
 ```
 
 Automatické testy overujú zachovanie zdrojových dát pri premiešaní, celý prechod medzi obrazovkami, výsledok 6/6, reštart a následný výsledok 0/6, rozloženie pri šírke 320 px a ochranu pred dvojklikom.
+
+## Screenshoty z Android emulátora
+
+Zachytené v emulátore `Medium_Phone_API_37.0`, rozlíšenie 1080 × 2400 px, zo skutočne spustenej aplikácie.
+
+| Start Screen | Questions Screen | Results Screen |
+| --- | --- | --- |
+| <img src="screenshots/start.png" width="220" alt="Start Screen"> | <img src="screenshots/questions.png" width="220" alt="Questions Screen"> | <img src="screenshots/results.png" width="220" alt="Results Screen so skóre 4 zo 6"> |
+
+Overenie prešlo: `flutter analyze` bez nálezov, všetky tri automatické testy úspešné a Android debug APK úspešne zostavený. V emulátore bol navyše overený zmiešaný výsledok 4/6 (67 %), označenie chýb a návrat na prvú otázku po reštarte s novým poradím odpovedí. iOS zostava nebola v prostredí Windows testovaná.
+
+ZIP na odovzdanie obsahuje všetky zdroje vrátane `lib/`, `pubspec.yaml`, platformových projektov, testov a troch screenshotov. Cache a lokálne nastavenia SDK sú vynechané.
